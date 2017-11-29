@@ -811,10 +811,13 @@ h3.difference{
   color:#0e7cc0;
 }
 
-.headertext h2{
-  color:white;
+.headertext {
+  color:#ddd;
 }
 
+.headertext h4{
+  color:#bbb; 
+}
 
 #error{
   display: none;
