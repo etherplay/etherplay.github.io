@@ -112,7 +112,7 @@
         <i class="fa fa-gamepad fa-5x"></i>
         <h3>Play Games</h3>
         <p>For each attempt, players pay a fee in <a href="https://ethereum.org">Ether</a>. This get recorded on the blockchain.</p>
-        <p>We plan to offer a large variety of games made by third party game developers. If you are one of them, do not hesitate to contact us. We would love to hear from you.</p>
+        <p>We plan to offer a large variety of games made by third party game developers. If you are one of them, do not hesitate to contact us. We would love to hear from you. You can find documentation <a href="doc">here</a>.</p>
         <img src="images/WO84-wu-X3.png" width="80" />
         
       </div>
@@ -287,15 +287,9 @@ Skill players can potentially earn from playing</li>
 <li>static variable or other global state changed need to be avoided or cleaned after every end game so multiple games can be played without side effect affecting second plays or need to reload the page</li>
 </ul>
 <p>The above list is true regardless of the technology involved.</p>
-<p>In term of Sdk code and api, we are currently still working on it but it should consist of a few function calls and will solve some the point mentioned above automatically.</p>
-<p>The game session (that runs the actual game) will run independently from the game shell (menu screen, settings screen, highscore screen, game over screen,...). This will avoid potential state bleeding from screens and game, as well as avoid previous game state to affect new games since for every attempt the game will be restarted.</p>
-<p>Note that the whole code can still be in one javascript file but there will be 2 execution path.</p>
-<ul>
-<li>One that execute and present the shell with its various screen and buttons. You can code it as you wish since the replay do not need to verify the execution.</li>
-<li>The other code path will be the actual game. Here inputs will need to be driven by etherplay's api. Similarly randomness will need to be generated via etherplay's api. The code should also be exclusively driven by etherplay fixed delta update loop. Renderring could be more flexible but extra care should be taken in that case to ensure perfect replayability.</li>
-</ul>
-<p>We are currently working on the api and will update that doc once it is stable.</p>
-<p>If you have question in the mean time, do not hesitate to contact us at <a href="mailto:contact@etherplay.io">contact@etherplay.io</a></p>
+<p>While this sounds daunting our sdk solve most of these issues</p>
+<p><strong>Our API documentation can be found <a href="doc">here</a>.</strong></p>
+<p>If you have question, do not hesitate to contact us at <a href="mailto:contact@etherplay.io">contact@etherplay.io</a></p>
 <p>Thanks</p>
 <p>Looking forward to hearing about your games ideas and help you publish it on Etherplay!</p>
 </article>
@@ -524,18 +518,18 @@ Skill players can potentially earn from playing</li>
 
 
   var developers =  document.getElementById("developers"); 
-  // var headerShowDevelopers =  document.getElementById("header_showDevelopers");
-  // headerShowDevelopers.addEventListener("click", function (event) {
-  //   event.preventDefault();
-  //   developers.style.display ="block";
-  //   developers.scrollIntoView();
-  // });
-  // var bottomShowFaq =  document.getElementById("bottom_showFaq");
-  // bottomShowFaq.addEventListener("click", function (event) {
-  //   event.preventDefault();
-  //   faq.style.display ="block";
-  //   faq.scrollIntoView();
-  // });
+  var headerShowDevelopers =  document.getElementById("header_showDevelopers");
+  headerShowDevelopers.addEventListener("click", function (event) {
+    event.preventDefault();
+    developers.style.display ="block";
+    developers.scrollIntoView();
+  });
+  var bottomShowFaq =  document.getElementById("bottom_showFaq");
+  bottomShowFaq.addEventListener("click", function (event) {
+    event.preventDefault();
+    faq.style.display ="block";
+    faq.scrollIntoView();
+  });
   var hideDevelopers =  document.getElementById("hideDevelopers");
   hideDevelopers.addEventListener("click", function (event) {
     event.preventDefault();
