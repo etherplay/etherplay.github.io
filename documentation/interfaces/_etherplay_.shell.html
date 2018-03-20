@@ -971,6 +971,9 @@ img { max-width: 100%; }
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 			<a href="_etherplay_.renderer.html" class="tsd-kind-icon">Renderer</a>
 		</li>
+		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+			<a href="_etherplay_.session.html" class="tsd-kind-icon">Session</a>
+		</li>
 		<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 			<a href="_etherplay_.shell.html" class="tsd-kind-icon">Shell</a>
 			<ul>
@@ -1013,7 +1016,11 @@ img { max-width: 100%; }
     <span class="hljs-comment">//On etherplay side, etherplay show a Etherplay logo for some time and will disapear only if that call is made with value &gt;= 1</span>
   };
 
-  self.ready = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">competition,canvas</span>)</span>{
+  self.ready = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">session,canvas</span>)</span>{
+
+    <span class="hljs-comment">//access the competition</span>
+    <span class="hljs-keyword">var</span> competition = session.competition;
+
     <span class="hljs-comment">//etherplay is now ready</span>
     <span class="hljs-comment">//the game might be still loading though.</span>
     <span class="hljs-comment">//competition.gameLoadingProgress() will give you how much loading have been done</span>
@@ -1156,22 +1163,22 @@ img { max-width: 100%; }
 					<div class="lead">
 						<p>ready will be called after preloading has been done and Etherplay has initialised itself</p>
 					</div>
-					<p>competition contains the method required to display the various information about the game and the competition</p>
-					<p>It also contains the method startGame <a href="_etherplay_.competition.html">Competition</a></p>
+					<p>it gives back the session object allowing you to get information from the current competition and start a game</p>
+					<p>At that point the shell will be visible</p>
 				</div>
 				<div class="tsd-type-declaration">
 					<h4>Type declaration</h4>
 					<ul class="tsd-parameters">
 						<li class="tsd-parameter-siganture">
 							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>competition<span class="tsd-signature-symbol">: </span><a href="_etherplay_.competition.html" class="tsd-signature-type">Competition</a>, canvas<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLCanvasElement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>session<span class="tsd-signature-symbol">: </span><a href="_etherplay_.session.html" class="tsd-signature-type">Session</a>, canvas<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLCanvasElement</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 							</ul>
 							<ul class="tsd-descriptions">
 								<li class="tsd-description">
 									<h4 class="tsd-parameters-title">Parameters</h4>
 									<ul class="tsd-parameters">
 										<li>
-											<h5>competition: <a href="_etherplay_.competition.html" class="tsd-signature-type">Competition</a></h5>
+											<h5>session: <a href="_etherplay_.session.html" class="tsd-signature-type">Session</a></h5>
 										</li>
 										<li>
 											<h5>canvas: <span class="tsd-signature-type">HTMLCanvasElement</span></h5>

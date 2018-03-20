@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>InputConfiguration | etherplay.js</title>
+	<title>Session | etherplay.js</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
@@ -962,13 +962,8 @@ img { max-width: 100%; }
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 			<a href="_etherplay_.input.html" class="tsd-kind-icon">Input</a>
 		</li>
-		<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 			<a href="_etherplay_.inputconfiguration.html" class="tsd-kind-icon">Input<wbr>Configuration</a>
-			<ul>
-				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-					<a href="_etherplay_.inputconfiguration.html#use" class="tsd-kind-icon">use</a>
-				</li>
-			</ul>
 		</li>
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 			<a href="_etherplay_.rng.html" class="tsd-kind-icon">RNG</a>
@@ -976,8 +971,13 @@ img { max-width: 100%; }
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 			<a href="_etherplay_.renderer.html" class="tsd-kind-icon">Renderer</a>
 		</li>
-		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+		<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 			<a href="_etherplay_.session.html" class="tsd-kind-icon">Session</a>
+			<ul>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
+					<a href="_etherplay_.session.html#competition" class="tsd-kind-icon">competition</a>
+				</li>
+			</ul>
 		</li>
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 			<a href="_etherplay_.shell.html" class="tsd-kind-icon">Shell</a>
@@ -995,21 +995,10 @@ img { max-width: 100%; }
 		<section class="tsd-panel tsd-comment">
 			<div class="tsd-comment tsd-typography">
 				<div class="lead">
-					<p><span class="tag interface">interface</span> <span class="tag game">game</span> The input options</p>
+					<p><span class="tag shell">shell</span> The Session object is where all start for the shell</p>
 				</div>
-				<p>use is basically a object whose key are input name</p>
-				<dl class="tsd-comment-tags">
-					<dt>example</dt>
-					<dd><pre><code class="lang-js">{
-    <span class="hljs-attr">use</span>: {
-        <span class="hljs-attr">isJumping</span> : {<span class="hljs-attr">type</span>:<span class="hljs-string">"boolean"</span>, <span class="hljs-attr">triggers</span>:[<span class="hljs-string">"Keyboard.ArrowUp"</span>]},
-        <span class="hljs-attr">touch</span> : {<span class="hljs-attr">type</span>:<span class="hljs-string">"touch"</span>,<span class="hljs-attr">triggers</span>:[<span class="hljs-string">"touch"</span>,<span class="hljs-string">"mouse"</span>]}
-    }
-}
-</code></pre>
-						<p>for keyboard key codes see <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode" class="external">https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/keyCode</a></p>
-					</dd>
-				</dl>
+				<p>It contains the competition object allowing to start the game</p>
+				<p>More to come : player, ...</p>
 			</div>
 		</section>
 		<section class="tsd-panel-group tsd-index-group">
@@ -1019,7 +1008,7 @@ img { max-width: 100%; }
 					<section class="tsd-index-section tsd-is-not-exported">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_etherplay_.inputconfiguration.html#use" class="tsd-kind-icon">use</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported"><a href="_etherplay_.session.html#competition" class="tsd-kind-icon">competition</a></li>
 						</ul>
 					</section>
 				</div>
@@ -1028,27 +1017,11 @@ img { max-width: 100%; }
 		<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-not-exported">
-				<a name="use" class="tsd-anchor"></a>
-				<h3>use</h3>
-				<div class="tsd-signature tsd-kind-icon">use<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
+				<a name="competition" class="tsd-anchor"></a>
+				<h3>competition</h3>
+				<div class="tsd-signature tsd-kind-icon">competition<span class="tsd-signature-symbol">:</span> <a href="_etherplay_.competition.html" class="tsd-signature-type">Competition</a></div>
 				<aside class="tsd-sources">
 				</aside>
-				<div class="tsd-type-declaration">
-					<h4>Type declaration</h4>
-					<ul class="tsd-parameters">
-						<li class="tsd-parameter-index-signature">
-							<h5><span class="tsd-signature-symbol">[</span>s: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">object</span></h5>
-							<ul class="tsd-parameters">
-								<li class="tsd-parameter">
-									<h5>triggers<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-								<li class="tsd-parameter">
-									<h5>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
 			</section>
 		</section>
 	</div>
