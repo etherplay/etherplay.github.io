@@ -6,6 +6,17 @@
 	<title>&quot;etherplay&quot; | etherplay.js</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+.tag {
+    padding: 1px 1px;
+    margin: 3px 0 3px 0;
+    border-radius: 4px;
+    border: 1px solid #808080;
+    color: #808080;
+    font-size: 0.8em;
+    font-weight: normal;
+}
+</style>
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
 /** Correct `block` display not defined in IE 6/7/8/9 and Firefox 3. */
@@ -971,16 +982,19 @@ img { max-width: 100%; }
 				<p>For developers this means the game code need to ensure perfect replayability</p>
 				<p>randomness thus need to be seeded and input need to be recorded</p>
 				<p>To ease the burden, Etherplay SDK provide an environment where these issues are automatically solved</p>
-				<p>Upon initialising etherplay via <code>etherplay.init</code> <a href="_etherplay_.html#etherplay.init">init</a> two object need to be given</p>
+				<p>To initialise your game you need to call etherplay via <code>etherplay.init</code></p>
+				<p>Each game have two components :</p>
 				<ul>
-					<li><p>the shell whose responsability is to show the menu, highscores and game over screen among other</p>
+					<li><p>the shell whose responsability is to show the menu, highscores and game over screen among other (this does not need to be verified as it is not the actual game)</p>
 					</li>
 					<li><p>the gameloader whose in charge to load and setup the game itself who need to follow strict guidelines to ensure replayability and verification</p>
 					</li>
 				</ul>
-				<p>Both of these object run in separate environment and cannot communicate outside of what etherplay&#39;s api provide</p>
+				<p>Both of these object run in separate environment and cannot communicate outside of what etherplay&#39;s api provide.</p>
 				<p>The Shell can only start a game and wait its result</p>
 				<p>When the game is being executed the shell is being hidden away and vice versa</p>
+				<p>In the following api documentation method and object tagged with <span class="tag">shell</span> are only present in the shell context</p>
+				<p>Similarly method and object tagged with <span class="tag">game</span> are only present in the game context</p>
 			</div>
 		</section>
 		<section class="tsd-panel-group tsd-index-group">
