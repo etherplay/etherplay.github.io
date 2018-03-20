@@ -16,6 +16,18 @@
     font-size: 0.8em;
     font-weight: normal;
 }
+.game {
+    border: 1px solid blue;
+    color: blue;
+}
+.shell{
+    border: 1px solid green;
+    color: green;
+}
+.interface{
+    border: 1px solid red;
+    color: red;
+}
 </style>
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
@@ -944,6 +956,9 @@ img { max-width: 100%; }
 			<a href="_etherplay_.error.html" class="tsd-kind-icon">Error</a>
 		</li>
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+			<a href="_etherplay_.fullgameresult.html" class="tsd-kind-icon">Full<wbr>Game<wbr>Result</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 			<a href="_etherplay_.game.html" class="tsd-kind-icon">Game</a>
 		</li>
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
@@ -973,9 +988,6 @@ img { max-width: 100%; }
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 			<a href="_etherplay_.startparameters.html" class="tsd-kind-icon">Start<wbr>Parameters</a>
 		</li>
-		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-			<a href="_etherplay_.timedgameresult.html" class="tsd-kind-icon">Timed<wbr>Game<wbr>Result</a>
-		</li>
 		<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
 			<a href="../modules/_etherplay_.html#etherplay" class="tsd-kind-icon">etherplay</a>
 		</li>
@@ -986,8 +998,10 @@ img { max-width: 100%; }
 		<section class="tsd-panel tsd-comment">
 			<div class="tsd-comment tsd-typography">
 				<div class="lead">
-					<p><span class="tag">shell</span> The Competition object contain the information and method required to show competition data and start a game</p>
+					<p><span class="tag shell">shell</span> The Competition object</p>
 				</div>
+				<p>It contains the information and method required to show competition data and start a game</p>
+				<p>It is provided to the shell upon calling <code>etherplay.init</code> (see <a href="../modules/_etherplay_.html#etherplay.init">init</a>)</p>
 				<p>More to come : getCurrentHighScores() , getCurrentJackpot(), ....</p>
 			</div>
 		</section>

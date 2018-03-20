@@ -16,6 +16,18 @@
     font-size: 0.8em;
     font-weight: normal;
 }
+.game {
+    border: 1px solid blue;
+    color: blue;
+}
+.shell{
+    border: 1px solid green;
+    color: green;
+}
+.interface{
+    border: 1px solid red;
+    color: red;
+}
 </style>
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
@@ -933,6 +945,9 @@ img { max-width: 100%; }
 			<a href="_etherplay_.error.html" class="tsd-kind-icon">Error</a>
 		</li>
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+			<a href="_etherplay_.fullgameresult.html" class="tsd-kind-icon">Full<wbr>Game<wbr>Result</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 			<a href="_etherplay_.game.html" class="tsd-kind-icon">Game</a>
 		</li>
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
@@ -973,9 +988,6 @@ img { max-width: 100%; }
 				</li>
 			</ul>
 		</li>
-		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-			<a href="_etherplay_.timedgameresult.html" class="tsd-kind-icon">Timed<wbr>Game<wbr>Result</a>
-		</li>
 		<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
 			<a href="../modules/_etherplay_.html#etherplay" class="tsd-kind-icon">etherplay</a>
 		</li>
@@ -986,8 +998,10 @@ img { max-width: 100%; }
 		<section class="tsd-panel tsd-comment">
 			<div class="tsd-comment tsd-typography">
 				<div class="lead">
-					<p><span class="tag">shell</span> This object need to contain 3 function fields</p>
+					<p><span class="tag interface">interface</span> <span class="tag shell">shell</span> Game Handler</p>
 				</div>
+				<p>This object is given to the <a href="_etherplay_.competition.html#startgame">startGame</a> function</p>
+				<p>You need to provide 3 fields to deal with each potential result of starting a game:</p>
 				<ul>
 					<li><p>one for when the game is about to start</p>
 					</li>
@@ -1074,14 +1088,14 @@ img { max-width: 100%; }
 					<ul class="tsd-parameters">
 						<li class="tsd-parameter-siganture">
 							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-not-exported">
-								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>result<span class="tsd-signature-symbol">: </span><a href="_etherplay_.timedgameresult.html" class="tsd-signature-type">TimedGameResult</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>result<span class="tsd-signature-symbol">: </span><a href="_etherplay_.fullgameresult.html" class="tsd-signature-type">FullGameResult</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 							</ul>
 							<ul class="tsd-descriptions">
 								<li class="tsd-description">
 									<h4 class="tsd-parameters-title">Parameters</h4>
 									<ul class="tsd-parameters">
 										<li>
-											<h5>result: <a href="_etherplay_.timedgameresult.html" class="tsd-signature-type">TimedGameResult</a></h5>
+											<h5>result: <a href="_etherplay_.fullgameresult.html" class="tsd-signature-type">FullGameResult</a></h5>
 										</li>
 									</ul>
 									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>

@@ -16,6 +16,18 @@
     font-size: 0.8em;
     font-weight: normal;
 }
+.game {
+    border: 1px solid blue;
+    color: blue;
+}
+.shell{
+    border: 1px solid green;
+    color: green;
+}
+.interface{
+    border: 1px solid red;
+    color: red;
+}
 </style>
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
@@ -933,6 +945,9 @@ img { max-width: 100%; }
 			<a href="_etherplay_.error.html" class="tsd-kind-icon">Error</a>
 		</li>
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+			<a href="_etherplay_.fullgameresult.html" class="tsd-kind-icon">Full<wbr>Game<wbr>Result</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 			<a href="_etherplay_.game.html" class="tsd-kind-icon">Game</a>
 		</li>
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
@@ -970,9 +985,6 @@ img { max-width: 100%; }
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 			<a href="_etherplay_.startparameters.html" class="tsd-kind-icon">Start<wbr>Parameters</a>
 		</li>
-		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-			<a href="_etherplay_.timedgameresult.html" class="tsd-kind-icon">Timed<wbr>Game<wbr>Result</a>
-		</li>
 		<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
 			<a href="../modules/_etherplay_.html#etherplay" class="tsd-kind-icon">etherplay</a>
 		</li>
@@ -983,10 +995,12 @@ img { max-width: 100%; }
 		<section class="tsd-panel tsd-comment">
 			<div class="tsd-comment tsd-typography">
 				<div class="lead">
-					<p><span class="tag">shell</span> <span class="tag">game</span> shell and gameLoader will be run independently of each other<br/></p>
+					<p><span class="tag interface">interface</span> <span class="tag shell">shell</span> <span class="tag game">game</span> Provide the 2 core context (game and shell)</p>
 				</div>
+				<p>Note that shell and gameLoader will be run independently of each other</p>
 				<p>No variable in one can affect the other<br/></p>
-				<p>This allow to ensure verifiabily without sacrifying development practise<br/></p>
+				<p>This allow to ensure verifiabily without sacrifying development practise</p>
+				<p>You need to implement both shell and gameLoader</p>
 			</div>
 		</section>
 		<section class="tsd-panel-group tsd-index-group">

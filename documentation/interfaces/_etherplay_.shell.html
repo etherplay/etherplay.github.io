@@ -16,6 +16,18 @@
     font-size: 0.8em;
     font-weight: normal;
 }
+.game {
+    border: 1px solid blue;
+    color: blue;
+}
+.shell{
+    border: 1px solid green;
+    color: green;
+}
+.interface{
+    border: 1px solid red;
+    color: red;
+}
 </style>
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
@@ -933,6 +945,9 @@ img { max-width: 100%; }
 			<a href="_etherplay_.error.html" class="tsd-kind-icon">Error</a>
 		</li>
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+			<a href="_etherplay_.fullgameresult.html" class="tsd-kind-icon">Full<wbr>Game<wbr>Result</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 			<a href="_etherplay_.game.html" class="tsd-kind-icon">Game</a>
 		</li>
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
@@ -970,9 +985,6 @@ img { max-width: 100%; }
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 			<a href="_etherplay_.startparameters.html" class="tsd-kind-icon">Start<wbr>Parameters</a>
 		</li>
-		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-			<a href="_etherplay_.timedgameresult.html" class="tsd-kind-icon">Timed<wbr>Game<wbr>Result</a>
-		</li>
 		<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
 			<a href="../modules/_etherplay_.html#etherplay" class="tsd-kind-icon">etherplay</a>
 		</li>
@@ -983,10 +995,12 @@ img { max-width: 100%; }
 		<section class="tsd-panel tsd-comment">
 			<div class="tsd-comment tsd-typography">
 				<div class="lead">
-					<p><span class="tag">shell</span> The Shell&#39;s prupose is to display the game intro / highscore and game over screens</p>
+					<p><span class="tag interface">interface</span> <span class="tag shell">shell</span> The Shell</p>
 				</div>
+				<p>The Shell&#39;s prupose is to display the game intro / highscore and game over screens</p>
 				<p>It is basically all what is arround the game</p>
 				<p>This part does not need to be verified and as such you can use whatever suit you to make it</p>
+				<p>You need to provide / implement 2 methods : &quot;preload&quot; and &quot;ready&quot;</p>
 				<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Shell</span>(<span class="hljs-params"></span>) </span>{
   <span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>;
 

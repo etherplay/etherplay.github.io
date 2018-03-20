@@ -16,6 +16,18 @@
     font-size: 0.8em;
     font-weight: normal;
 }
+.game {
+    border: 1px solid blue;
+    color: blue;
+}
+.shell{
+    border: 1px solid green;
+    color: green;
+}
+.interface{
+    border: 1px solid red;
+    color: red;
+}
 </style>
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
@@ -933,6 +945,9 @@ img { max-width: 100%; }
 			<a href="_etherplay_.error.html" class="tsd-kind-icon">Error</a>
 		</li>
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
+			<a href="_etherplay_.fullgameresult.html" class="tsd-kind-icon">Full<wbr>Game<wbr>Result</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 			<a href="_etherplay_.game.html" class="tsd-kind-icon">Game</a>
 		</li>
 		<li class="current tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
@@ -973,9 +988,6 @@ img { max-width: 100%; }
 		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
 			<a href="_etherplay_.startparameters.html" class="tsd-kind-icon">Start<wbr>Parameters</a>
 		</li>
-		<li class=" tsd-kind-interface tsd-parent-kind-external-module tsd-is-not-exported">
-			<a href="_etherplay_.timedgameresult.html" class="tsd-kind-icon">Timed<wbr>Game<wbr>Result</a>
-		</li>
 		<li class=" tsd-kind-object-literal tsd-parent-kind-external-module">
 			<a href="../modules/_etherplay_.html#etherplay" class="tsd-kind-icon">etherplay</a>
 		</li>
@@ -986,10 +998,10 @@ img { max-width: 100%; }
 		<section class="tsd-panel tsd-comment">
 			<div class="tsd-comment tsd-typography">
 				<div class="lead">
-					<p><span class="tag">game</span> The GameLoader responsability is to load the game resources</p>
+					<p><span class="tag interface">interface</span> <span class="tag game">game</span> The GameLoader</p>
 				</div>
-				<p>create the game instance</p>
-				<p>and optionaly setup rendering</p>
+				<p>You need to implement at least loadGameResources and createNewGame</p>
+				<p>This will called as part of <code>etherplay.init</code> in the game context</p>
 				<pre><code class="lang-js"><span class="hljs-comment">//renderer that can render the game passed in</span>
 <span class="hljs-comment">//usefull to isolate the game logic in its own object and rendering in another</span>
 <span class="hljs-comment">//it is optional but if you do not have it, you would need an alternative way to get access to the canvas so you can display the game state.</span>
