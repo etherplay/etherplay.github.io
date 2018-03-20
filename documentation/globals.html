@@ -948,8 +948,24 @@ img { max-width: 100%; }
 			where the game file path is your javascript file </p>
 			<p> and you ll get a local server running on the specified port (default to 8080) that will serve your game file along side whatever is in the containing folder</p>
 			<p> You can then start playing your game on <code>http://localhost:&lt;port&gt;</code> (by default <a href="http://localhost:8080">http://localhost:8080</a>)</p>
-			<p> In order for your game to run though you will need to call the right api using:</p>
-			<p> <code>etherplay.init(...)</code></p>
+			<p> In order for your game to run though you will need to call the right api using <code>etherplay.init(...)</code></p>
+			<p> No code apart from variable and function declaration/initialisation  should be running outside of the method and callback provided to <code>etherplay.init</code></p>
+			<p> In other words you game.js file will look like the following:</p>
+			<pre><code><span class="hljs-keyword">var</span> <span class="hljs-keyword">shell</span> = ... <span class="hljs-comment">//initialise the shell and its various method</span>
+<span class="hljs-keyword">var</span> gameLoader = ... <span class="hljs-comment">//initialise the gameLoader and its various method including "createNewGame" that should return a Game</span>
+
+etherplay.init({
+  <span class="hljs-keyword">shell</span>:<span class="hljs-keyword">shell</span>,
+  gameLoader:gameLoader
+},
+{
+  <span class="hljs-keyword">input</span>:{
+    ... <span class="hljs-comment">//input configuration</span>
+  }
+}
+);
+
+</code></pre>
 		</div>
 		<section class="tsd-panel-group tsd-index-group">
 			<h2>Summary</h2>
