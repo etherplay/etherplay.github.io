@@ -687,7 +687,7 @@ dl.tsd-comment-tags dt { clear: both; float: left; padding: 1px 5px; margin: 0 1
 dl.tsd-comment-tags dd { margin: 0 0 10px 0; }
 dl.tsd-comment-tags p { margin: 0; }
 
-.tsd-panel.tsd-comment .lead { font-size: 1.1em; line-height: 1.333em; margin-bottom: 2em; }
+.tsd-panel.tsd-comment .lead { font-size: 1.1em; line-height: 1.333em; margin-bottom: 2em; font-weight: bold; }
 .tsd-panel.tsd-comment .lead:last-child { margin-bottom: 0; }
 
 .toggle-protected .tsd-is-private { display: none; }
@@ -996,7 +996,7 @@ img { max-width: 100%; }
 				<p>To ensure fairness, the Etherplay platform verifies each player submission by replaying the game to ensure the validity of the game</p>
 				<p>For developers this means the game code need to ensure perfect replayability</p>
 				<p>randomness thus need to be seeded and input need to be recorded</p>
-				<p>To ease the burden, Etherplay SDK provide an environment where these issues are automatically solved</p>
+				<p>To ease the burden, etherplay.js provide an environment where these issues are automatically solved</p>
 				<p>To initialise your game you need to call etherplay via <code>etherplay.init</code></p>
 				<p>Each game have two components :</p>
 				<ul>
@@ -1011,7 +1011,7 @@ img { max-width: 100%; }
 				<p>In the following api documentation method and object tagged with <span class="tag shell">shell</span> are only present in the shell context</p>
 				<p>Similarly method and object tagged with <span class="tag game">game</span> are only present in the game context</p>
 				<p>Item tagged with <span class="tag interface">interface</span> are to be provided / implemented by you</p>
-				<p>The other are provided by the api though callbacks</p>
+				<p>The others are provided by the api though callbacks</p>
 			</div>
 		</section>
 		<section class="tsd-panel-group tsd-index-group">
@@ -1063,7 +1063,7 @@ img { max-width: 100%; }
 				</aside>
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>etherplay library</p>
+						<p>etherplay</p>
 					</div>
 					<pre><code class="lang-js">etherplay.init({
     <span class="hljs-attr">shell</span>:shell, <span class="hljs-comment">//the shell setup</span>
@@ -1131,6 +1131,9 @@ img { max-width: 100%; }
 								<div class="lead">
 									<p>allow to load javascript dependencies (in parallel)</p>
 								</div>
+								<p>Since you will not have access to html where your game will be embeded this function allow you to load javascript dependencies before hand</p>
+								<p>Note that these should be loaded while the game is running</p>
+								<p>All game dependencies need to be done loading before the game start to ensure perfect replayability</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
