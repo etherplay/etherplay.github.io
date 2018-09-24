@@ -1,0 +1,11 @@
+{
+  "name": "etherplay.github.io",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "serve": "lite-server"
+  },
+  "dependencies": {
+    "lite-server": "^2.4.0"
+  }
+}
