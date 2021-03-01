@@ -1,0 +1,19 @@
+{
+  "appName": "Etherplay",
+  "appShortName": "Etherplay",
+  "appDescription": "Game Studio Building Unstoppable Games on Ethereum",
+  "appShortDescription": "Game Studio Building Unstoppable Games on Ethereum",
+  "developerName": "Etherplay",
+  "developerURL": "https://etherplay.io",
+  "url": "https://etherplay.io",
+  "background": "#1f253a",
+  "theme_color": "#1f253a",
+  "appleStatusBarStyle": "black-translucent",
+  "display": "fullscreen",
+  "icon": "icon.svg",
+  "maskable_icons": [{
+    "src": "maskable_icon_512x512.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }]
+}

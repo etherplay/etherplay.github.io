@@ -1,1 +1,17 @@
+.env*
+!*.default
+
+.snowpack
+build/
+
 node_modules/
+
+.vscode/*
+!.vscode/settings.json.default
+
+public/index.html
+public/pwa/
+public/robots.txt
+
+.yalc/
+yalc.lock
