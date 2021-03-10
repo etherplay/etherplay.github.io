@@ -1,6 +1,7 @@
 <script lang="ts">
   import NavButton from '../components/navigation/NavButton.svelte';
   import Feature from '../components/Feature.svelte';
+import { extendSchema } from 'graphql';
   const name = 'Etherplay';
 
   type Outcome = {
@@ -116,7 +117,7 @@
     </p> -->
 
     <p class="m-6 mt-12 0 text-xl text-green-400">
-      Latest Game Coming Very Soon...
+      Our latest game <a class="underline" href="https://conquest.eth.link">conquest.eth</a> is coming soon.
     </p>
 
     <!-- Check it out and register <a class="text-blue-500 underline" href="https://conquest.eth.link">there</a> to be on the waiting list for the alpha release -->
